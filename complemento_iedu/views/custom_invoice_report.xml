@@ -1,0 +1,55 @@
+<odoo>
+    <template id="report_cfdi_invoice_inherit_ine" inherit_id="cdfi_invoice.report_invoice_inherit_cdfi">
+	    <xpath expr="//div[@name='cadenas']" position="before">
+
+            <t t-if="o.iedu_habilitar">
+               <br/> Complemento IEDU
+               <div class="row" style="border:solid 2px black;font-size:13px;">
+                    <table class="borderless" cellspacing="0"  style="width:100%;border:none;border-collapse:separate;border-spacing: 2px;">
+                        <tr>
+                           <td>
+                               <strong>Nombre</strong>
+                           </td>
+                           <td>
+                               <span t-field="o.nombre_alumno" />
+                           </td>
+                           <td>
+                               <strong>Apellido</strong>
+                           </td>
+                           <td>
+                               <span t-field="o.apellido_alumno" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                               <strong>CURP</strong>
+                           </td>
+                           <td>
+                               <span t-field="o.curp_alumno" />
+                           </td>
+                           <td>
+                               <strong>Nivel Educativo</strong>
+                           </td>
+                           <td>
+                               <span t-field="o.nivelEducativo" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                               <strong>RVOE</strong>
+                           </td>
+                           <td>
+                               <span t-field="o.autRVOE" />
+                           </td>
+                           <td>
+                           </td>
+                           <td>
+                           </td>
+                        </tr>
+                    </table>
+               </div>
+            </t>
+	    </xpath>
+        </template>
+    
+</odoo>
